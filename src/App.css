@@ -1,0 +1,371 @@
+/* App.css */
+
+/* Global styles */
+@keyframes bubble-animation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0; /* Change to 100vh to move off-screen */
+  }
+}
+
+/* Bubble styles */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(173, 216, 230, 0.6);
+  animation: bubble-animation linear infinite;
+  bottom: -100px; /* Start below the viewport */
+}
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 5s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 30px;
+  height: 30px;
+  left: 20%;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 30%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 20px;
+  height: 20px;
+  left: 40%;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+}
+
+.bubble:nth-child(5) {
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+/* More bubbles */
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  left: 60%;
+  animation-duration: 5.5s;
+  animation-delay: 0.5s;
+}
+
+.bubble:nth-child(7) {
+  width: 35px;
+  height: 35px;
+  left: 70%;
+  animation-duration: 4.5s;
+  animation-delay: 1.2s;
+}
+
+.bubble:nth-child(8) {
+  width: 55px;
+  height: 55px;
+  left: 80%;
+  animation-duration: 6.5s;
+  animation-delay: 2.2s;
+}
+
+.bubble:nth-child(9) {
+  width: 25px;
+  height: 25px;
+  left: 90%;
+  animation-duration: 3.5s;
+  animation-delay: 1.8s;
+}
+
+.bubble:nth-child(10) {
+  width: 65px;
+  height: 65px;
+  left: 15%;
+  animation-duration: 7.5s;
+  animation-delay: 3.8s;
+}
+
+/* Body styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to right, #1b0117, #5a3563, #9b51a0, #043e25, #012105);
+  color: #236a29;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Prevent scrolling */
+  position: relative; /* Needed for absolute positioning of bubbles */
+}
+
+/* App container styles */
+.App {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Frame styles */
+.frame {
+  max-width: 800px;
+  width: 100%; /* Make frame responsive */
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(to right, #489e83, #192125);
+  box-shadow: 0 0 10px rgba(100, 250, 500, 0.5);
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 1em;
+  margin-top: -20px;
+  padding-bottom: 70px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Input container styles */
+.input-container {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Label styles */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Scale value styles */
+.scale-value {
+  color: white; 
+  margin-left: 680px; 
+}
+
+/* Input and select styles */
+.input-container input,
+.input-container select {
+  width: 100%; /* Full width */
+  padding: 10px; /* Optional: padding for better spacing */
+  border: 1px solid #ccc; /* Optional: border styling */
+  border-radius: 4px; /* Optional: rounded corners */
+  box-sizing: border-box; /* Include padding and border in width */
+  margin-bottom: 10px; /* Space between fields */
+}
+
+input[type="text"],
+input[type="range"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+input[type="range"] {
+  width: calc(100% - 70px);
+  margin-right: 10px;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Button container styles */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+/* Button styles */
+button {
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+button:first-child {
+  background-color: #6b0e17;
+}
+
+button:nth-child(2) {
+  background-color: #ffa500;
+}
+
+button:last-child {
+  background-color: #32cd32;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:first-child:hover {
+  background-color: #a73b40;
+}
+
+button:nth-child(2):hover {
+  background-color: #ff8c00;
+}
+
+button:last-child:hover {
+  background-color: #28a745;
+}
+
+button:disabled {
+  background-color: #113901;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading and progress styles */
+.loading {
+  color: #ffecb3;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(80, 180, 116, 0.5);
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #092f01;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.progress-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+/* Preview container styles */
+.preview-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.preview-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Suggestions styles */
+.suggestions-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.suggestion-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.suggestion-images img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.suggestion-images img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
